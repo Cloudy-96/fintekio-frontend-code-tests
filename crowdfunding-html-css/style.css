@@ -27,10 +27,6 @@
 	font-family: Roboto;
 }
 
-body {
-	display: flex-rows;
-}
-
 main,
 .donationProgress,
 .speechBubble,
@@ -38,6 +34,7 @@ main,
 	width: 300px;
 }
 
+/* --- Speech Bubble ---*/
 .speechBubble {
 	position: relative;
 	display: grid;
@@ -64,15 +61,13 @@ main,
 	color: white;
 }
 
+/* --- Main Section --- */
+
 main {
 	margin: 20px;
 	border: solid 1px #DCDCDC
 }
 
-.center {
-	transform: translate(15px, 0);
-	padding-bottom: 5px;
-}
 
 .donationProgress {
 	position: fixed;
@@ -83,14 +78,19 @@ main {
 	border: solid 1px #DCDCDC;
 }
 
-p {
-	margin: 8px;
-	padding-top: 8px;
+.center {
+	transform: translate(15px, 0);
+	padding-bottom: 5px;
 }
 
 .orange {
 	color: #F15E33;
 	font-weight: 500;
+}
+
+p {
+	margin: 8px;
+	padding-top: 8px;
 }
 
 a {
@@ -110,10 +110,26 @@ a {
 }
 
 #giveNow,
-input {
+.donationInput {
 	height: 35px;
 	width: 100px;
 	box-shadow: #838383 4px;
+}
+
+.donationInput {
+	display: grid;
+	grid-template-columns: 10px auto;
+	place-items: center;
+	justify-content: center;
+	gap: 3px;
+	border: 1px solid #838383;
+	border-radius: 3px;
+}
+
+input {
+	width: 80px;
+	height: 25px;
+	border: none
 }
 
 form {
