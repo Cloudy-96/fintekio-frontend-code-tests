@@ -33,17 +33,30 @@ body {
 
 main,
 .donationProgress,
-.donationCountdown,
+.speechBubble,
 .buttons {
 	width: 300px;
 }
 
-.donationCountdown {
+.speechBubble {
+	position: relative;
+	display: grid;
+	place-content: center;
+
 	margin-left: 20px;
 	margin-top: 12px;
-	padding: 6px;
+	height: 45px;
 	background-color: #424242;
 	border-radius: 3px;
+}
+
+.bubblePointer {
+	margin-top: -22px;
+	margin-left: 240px;
+	height: 40px;
+	width: 20px;
+	background-color: #424242;
+	transform: rotate(45deg);
 }
 
 .white strong,
@@ -56,6 +69,10 @@ main {
 	border: solid 1px #DCDCDC
 }
 
+.center {
+	transform: translate(15px, 0);
+	padding-bottom: 5px;
+}
 
 .donationProgress {
 	position: fixed;
@@ -71,10 +88,17 @@ p {
 	padding-top: 8px;
 }
 
+.orange {
+	color: #F15E33;
+	font-weight: 500;
+}
+
 a {
 	text-decoration: none;
 	color: #25A5D8;
 	font-style: italic;
+	font-size: small;
+	padding: 6px;
 }
 
 /* FORM CSS */
@@ -109,7 +133,7 @@ form {
 
 .buttons button {
 	height: 25px;
-	border: 1px solid #838383;
+	border: 0.2px solid #838383;
 	border-radius: 2px;
 	font-weight: 600;
 }
